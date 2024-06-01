@@ -1,0 +1,73 @@
+*eclipse.nvim.txt*     For Neovim >= 0.8.0     Last change: 2023 September 25
+
+==============================================================================
+Table of Contents                            *eclipse.nvim-table-of-contents*
+
+1. Eclipse                                           |eclipse.nvim-eclipse|
+  - Requirements                         |eclipse.nvim-eclipse-requirements|
+  - Installation                         |eclipse.nvim-eclipse-installation|
+  - Configuration                       |eclipse.nvim-eclipse-configuration|
+  - Usage                                       |eclipse.nvim-eclipse-usage|
+
+==============================================================================
+1. Eclipse                                           *eclipse.nvim-eclipse*
+
+**Eclipse** is a Lua plugin for Neovim 0.5 that dims inactive portions of the
+code you’re editing.
+
+The plugin was heavily inspired by Twilight, it uses TreeSitter for syntax 
+based dimming.
+
+<https://github.com/folke/twilight.nvim> 
+
+
+REQUIREMENTS                             *eclipse.nvim-eclipse-requirements*
+
+- Neovim >= 0.5.0
+
+
+INSTALLATION                             *eclipse.nvim-eclipse-installation*
+
+Install the plugin with your preferred package manager:
+
+
+LAZY.NVIM ~
+
+>lua
+    -- Lua
+    {
+      "folke/eclipse.nvim",
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    }
+<
+
+
+CONFIGURATION                           *eclipse.nvim-eclipse-configuration*
+
+Eclipse comes with the following defaults:
+
+>lua
+    {
+      dimming = {
+        alpha = 0.25, -- amount of dimming
+        -- we try to get the foreground from the highlight groups or fallback color
+        color = { "Normal", "#ffffff" },
+        term_bg = "#000000", -- if guibg=NONE, this will be used to calculate text color
+        inactive = false, -- when true, other windows will be fully dimmed (unless they contain the same buffer)
+      },
+      exclude = {}, -- exclude these filetypes
+    }
+<
+
+
+USAGE                                           *eclipse.nvim-eclipse-usage*
+
+You can manually trigger **Eclipse** using the commands:
+
+- `Eclipse` toggle eclipse
+- `EclipseEnable` enable eclipse
+- `EclipseDisable `disable eclipse

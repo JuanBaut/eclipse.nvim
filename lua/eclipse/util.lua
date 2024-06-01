@@ -46,7 +46,7 @@ function M.is_dark(hex)
 end
 
 function M.log(msg, hl)
-	vim.api.nvim_echo({ { "Twilight: ", hl }, { msg } }, true, {})
+	vim.api.nvim_echo({ { "Eclipse: ", hl }, { msg } }, true, {})
 end
 
 function M.warn(msg)
