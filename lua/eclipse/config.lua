@@ -59,6 +59,4 @@ function M.colors()
 	vim.cmd("highlight! def Eclipse guifg=" .. dimmed .. " guibg=" .. bg)
 end
 
-M.setup()
-
 return M
