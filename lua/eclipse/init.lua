@@ -1,4 +1,4 @@
-local view = require("eclipse.view")
+local view = require("eclipse.view.view")
 local config = require("eclipse.config")
 
 local M = {}
